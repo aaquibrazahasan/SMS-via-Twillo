@@ -21,7 +21,7 @@ def send_invitation(to, body, messaging_service_sid):
         return 'Error', str(e)
 
 # Path to CSV file containing phone numbers
-csv_file_path = '/Users/aaquibhasan/Desktop/contacts.csv'
+csv_file_path = '/Users/username/Desktop/contacts.csv'
 
 # List to store status of sent messages
 report = []
@@ -37,7 +37,7 @@ with open(csv_file_path, 'r') as file:
         report.append([phone_number, status, message_id])
 
 # Write report to CSV file
-report_file_path = '/Users/aaquibhasan/Desktop/invitation_report.csv'
+report_file_path = '/Users/username/Desktop/invitation_report.csv'
 with open(report_file_path, 'w', newline='') as file:
     writer = csv.writer(file)
     writer.writerow(['Phone Number', 'Status', 'Message ID'])
